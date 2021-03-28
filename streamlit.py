@@ -1,39 +1,27 @@
+
+import yfinance as yf
 import streamlit as st
-import pandas as pd
-import numpy as np
-import yfinance as yf 
 
-##############
-# Stock data #
-##############
+st.write("""
+# Simple Stock Price App
+Shown are the stock **closing price** and ***volume*** of Google!
+""")
 
-# Download data
-df = yf.download(option,start= start_date,end= end_date, progress=False)
+# https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
+#define the ticker symbol
+tickerSymbol = 'GOOGL'
+#get data on this ticker
+tickerData = yf.Ticker(tickerSymbol)
+#get the historical prices for this ticker
+tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
+# Open	High	Low	Close	Volume	Dividends	Stock Splits
 
-# Bollinger Bands
-indicator_bb = BollingerBands(df['Low'])
-bb = df
-bb['bb_h'] = indicator_bb.bollinger_hband()
-bb['bb_l'] = indicator_bb.bollinger_lband()
-bb = bb[['Low','bb_h','bb_l']]
+st.write("""
+## Closing Price
+""")
+st.line_chart(tickerDf.Close)
+st.write("""
+## Volume Price
+""")
+st.line_chart(tickerDf.Volume)
 
-# Resistence Strength Indicator
-rsi = RSIIndicator(df['Low']).rsi()
-
-###################
-# Set up main app #
-###################
-
-# Plot the prices and the bolinger bands
-st.write('Stock Bollinger Bands')
-st.line_chart(bb)
-
-progress_bar = st.progress(0)
-
-# Plot RSI
-st.write('Stock RSI ')
-st.line_chart(rsi)
-
-# Data of recent days
-st.write('Recent data ')
-st.dataframe(df.tail(30))
