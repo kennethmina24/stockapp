@@ -55,7 +55,7 @@ st.line_chart(rsi)
 st.write('Recent data ')
 st.dataframe(df.tail(30))
 
-tickerData = option
+tickerData = yf.Ticker(option)
 
 # Ticker information
 string_logo = '<img src=%s>' % tickerData.info['logo_url']
