@@ -6,7 +6,9 @@ from ta.trend import MACD
 from ta.momentum import RSIIndicator
 import datetime
 
-
+before = today - datetime.timedelta(days=360)
+start_date = st.sidebar.date_input('Start date', before)
+end_date = st.sidebar.date_input('End date', today)
 today = datetime.date.today()
 
 st.write("""
