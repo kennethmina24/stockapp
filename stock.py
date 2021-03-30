@@ -25,7 +25,7 @@ else:
 ###############
 #Download Data#
 ###############
-df = yf.download(option,start= start_date,end= end_date, progress=False)
+df = yf.download(option, start= start_date,end= end_date, progress=False)
 #Indicators#
 # Bollinger Bands#
 indicator_bb = BollingerBands(df['Low'])
@@ -54,5 +54,3 @@ st.line_chart(rsi)
 # Data of recent days
 st.write('Recent data ')
 st.dataframe(df.tail(30))
-
-
