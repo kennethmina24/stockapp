@@ -1,6 +1,9 @@
 import streamlit as st
 import datetime
 import yfinance as yf
+from ta.volatility import BollingerBands
+from ta.trend import MACD
+from ta.momentum import RSIIndicator
 
 st.write("""
 ## Closing Price
@@ -23,5 +26,10 @@ else:
 #Download Data#
 ###############
 df = yf.download(option,start= start_date,end= end_date, progress=False)
-
-    
+#Indicators#
+# Bollinger Bands#
+indicator_bb = BollingerBands(df['Close'])
+bb = df
+bb['bb_h'] = indicator_bb.bollinger_hband()
+bb['bb_l'] = indicator_bb.bollinger_lband()
+bb = bb[['Close','bb_h','bb_l']]
