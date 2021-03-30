@@ -12,7 +12,7 @@ st.write("""
 ###########
 # sidebar #
 ###########
-user_input = st.text_input('Enter Stock Symbol', )
+option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
 import datetime
 today = datetime.date.today()
 before = today - datetime.timedelta(days=1825)
@@ -54,3 +54,5 @@ st.line_chart(rsi)
 # Data of recent days
 st.write('Recent data ')
 st.dataframe(df.tail(30))
+
+
