@@ -1,11 +1,16 @@
 
 import yfinance as yf
 import streamlit as st
+from ta.volatility import BollingerBands
+from ta.trend import MACD
+from ta.momentum import RSIIndicator
 
 st.write("""
 # Simple Stock Price App
 Shown are the stock **closing price** and ***volume*** of Google!
 """)
+
+option = st.sidebar.selectbox(input(), ( 'MVIS', 'APHA',"XPEV","PLTR"))
 
 # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
 #define the ticker symbol
