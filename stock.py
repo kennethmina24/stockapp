@@ -54,3 +54,15 @@ st.line_chart(rsi)
 # Data of recent days
 st.write('Recent data ')
 st.dataframe(df.tail(30))
+
+tickerData = option
+
+# Ticker information
+string_logo = '<img src=%s>' % tickerData.info['logo_url']
+st.markdown(string_logo, unsafe_allow_html=True)
+
+string_name = tickerData.info['longName']
+st.header('**%s**' % string_name)
+
+string_summary = tickerData.info['longBusinessSummary']
+st.info(string_summary)
