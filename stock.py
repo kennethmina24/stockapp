@@ -12,7 +12,7 @@ st.write("""
 ###########
 # sidebar #
 ###########
-user_input = st.text_input('Select one symbol', )
+user_input = st.text_input('Enter Stock Symbol', )
 import datetime
 today = datetime.date.today()
 before = today - datetime.timedelta(days=1825)
