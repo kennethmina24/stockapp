@@ -5,6 +5,9 @@ from ta.volatility import BollingerBands
 from ta.trend import MACD
 from ta.momentum import RSIIndicator
 
+#Side Function
+option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
+#Heading Info
 tickerData = yf.Ticker(option)
 
 # Ticker information
@@ -20,7 +23,6 @@ st.info(string_summary)
 ###########
 # sidebar #
 ###########
-option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
 import datetime
 today = datetime.date.today()
 before = today - datetime.timedelta(days=1825)
