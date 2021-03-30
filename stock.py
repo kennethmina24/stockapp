@@ -4,6 +4,10 @@ import streamlit as st
 from ta.volatility import BollingerBands
 from ta.trend import MACD
 from ta.momentum import RSIIndicator
+import datetime
+
+
+today = datetime.date.today()
 
 st.write("""
 # Simple Stock Price App
