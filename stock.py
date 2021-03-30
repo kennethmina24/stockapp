@@ -12,7 +12,7 @@ st.write("""
 ###########
 # sidebar #
 ###########
-option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
+user_input = st.text_input('Select one symbol', )
 import datetime
 today = datetime.date.today()
 before = today - datetime.timedelta(days=1825)
@@ -25,14 +25,14 @@ else:
 ###############
 #Download Data#
 ###############
-df = yf.download(option,start= start_date,end= end_date, progress=False)
+df = yf.download(user_input,start= start_date,end= end_date, progress=False)
 #Indicators#
 # Bollinger Bands#
-indicator_bb = BollingerBands(df['Close'])
+indicator_bb = BollingerBands(df['Low'])
 bb = df
 bb['bb_h'] = indicator_bb.bollinger_hband()
 bb['bb_l'] = indicator_bb.bollinger_lband()
-bb = bb[['Close','bb_h','bb_l']]
+bb = bb[['Low','bb_h','bb_l']]
 
 # Resistence Strength Indicator
 rsi = RSIIndicator(df['Low']).rsi()
@@ -54,6 +54,3 @@ st.line_chart(rsi)
 # Data of recent days
 st.write('Recent data ')
 st.dataframe(df.tail(30))
-
-
-user_input = st.text_input("label goes here", )
