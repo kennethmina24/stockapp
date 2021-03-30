@@ -4,4 +4,4 @@ st.write("""
 ## Closing Price
 """)
 
-option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
+option = st.sidebar.selectbox('Select one symbol', input())
