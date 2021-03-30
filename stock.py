@@ -25,7 +25,7 @@ else:
 ###############
 #Download Data#
 ###############
-df = yf.download(user_input,start= start_date,end= end_date, progress=False)
+df = yf.download(option,start= start_date,end= end_date, progress=False)
 #Indicators#
 # Bollinger Bands#
 indicator_bb = BollingerBands(df['Low'])
