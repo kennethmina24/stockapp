@@ -1,3 +1,4 @@
 streamlit==0.71.0
 yfinance==0.1.59
 ta==0.7.0
+python==3.9.0 
