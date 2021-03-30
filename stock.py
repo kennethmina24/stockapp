@@ -4,5 +4,4 @@ st.write("""
 ## Closing Price
 """)
 
-st.write('Stock RSI')
-st.line_chart(rsi)
+option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
