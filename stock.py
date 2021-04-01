@@ -5,6 +5,7 @@ from ta.volatility import BollingerBands
 from ta.trend import MACD
 from ta.momentum import RSIIndicator
 
+
 #Side Function
 option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
 #Heading Info
@@ -54,6 +55,7 @@ rsi = RSIIndicator(df['Low']).rsi()
 # Plot the prices and the bolinger bands
 st.write('Stock Bollinger Bands')
 st.line_chart(bb)
+
 
 progress_bar = st.progress(0)
 
