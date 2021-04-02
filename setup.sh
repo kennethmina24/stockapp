@@ -1,7 +1,4 @@
 mkdir -p ~/.streamlit/
-mkdir .streamlit
-
-cd .streamlit
 
 echo "\
 [general]\n\
