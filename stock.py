@@ -52,7 +52,6 @@ bb = bb[['Low','bb_h','bb_l']]
 # Resistence Strength Indicator
 rsi = RSIIndicator(df['Low']).rsi()
 
-
 ###################
 # Set up main app #
 ###################
