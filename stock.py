@@ -9,7 +9,7 @@ from ta.momentum import RSIIndicator
 ##############
 #Test SideBar#
 # Retrieving tickers data
-ticker_list = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/s-and-p-500-companies/master/data/constituents_symbols.txt')
+ticker_list = pd.read_csv(https://raw.githubusercontent.com/kennethmina24/stockapp/master/List%20of%20Names%20(Stocks))
 tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list) # Select ticker symbol
 
 
