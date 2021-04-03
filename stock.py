@@ -11,12 +11,12 @@ from ta.momentum import RSIIndicator
 # Retrieving tickers data
 ticker_list = pd.read_csv('https://raw.githubusercontent.com/kennethmina24/stockapp/master/List%20of%20Names%20(Stocks)')
 tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list) # Select ticker symbol
+tickerData = yf.Ticker(tickerSymbol) # Get ticker data
 
 
 #Side Function
 option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
 #Heading Info
-tickerData = yf.Ticker(ticker_list)
 
 # Ticker information
 string_logo = '<img src=%s>' % tickerData.info['logo_url']
