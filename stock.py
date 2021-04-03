@@ -6,8 +6,6 @@ from ta.volatility import BollingerBands
 from ta.trend import MACD
 from ta.momentum import RSIIndicator
 
-
-st.beta_set_page_config(page_title='Hello.io',page_icon=":smiley:")
 ##############
 # Retrieving tickers data
 ticker_list = pd.read_csv('https://raw.githubusercontent.com/kennethmina24/stockapp/master/List%20of%20Names%20(Stocks)')
