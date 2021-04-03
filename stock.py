@@ -70,5 +70,5 @@ st.line_chart(rsi)
 # Data of recent days
 st.write('Recent data ')
 st.dataframe(df.tail(30))
-
+st.datafame(rsi.tail(30))
 
