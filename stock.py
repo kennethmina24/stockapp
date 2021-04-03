@@ -51,7 +51,7 @@ bb = bb[['Low','bb_h','bb_l']]
 
 # Resistence Strength Indicator
 rsi = RSIIndicator(df['Low']).rsi()
-df=df.append(rsi)
+
 
 ###################
 # Set up main app #
@@ -66,7 +66,7 @@ progress_bar = st.progress(0)
 # Plot RSI
 st.write('Stock RSI ')
 st.line_chart(rsi)
-st.dataframe(rsi.tail(30))
+st.dataframe(rsi.tail(7))
 
 # Data of recent days
 st.write('Recent data ')
