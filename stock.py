@@ -43,7 +43,7 @@ else:
 ###############
 #Download Data#
 ###############
-df = yf.download(tickerData, start= start_date,end= end_date, progress=False)
+df = yf.download(tickerSymbol, start= start_date,end= end_date, progress=False)
 #Indicators#
 # Bollinger Bands#
 indicator_bb = BollingerBands(df['Low'])
