@@ -1,9 +1,16 @@
 import streamlit as st
 import datetime
 import yfinance as yf
+import pandas as pd
 from ta.volatility import BollingerBands
 from ta.trend import MACD
 from ta.momentum import RSIIndicator
+
+##############
+#Test SideBar#
+# Retrieving tickers data
+ticker_list = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/s-and-p-500-companies/master/data/constituents_symbols.txt')
+tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list) # Select ticker symbol
 
 
 #Side Function
