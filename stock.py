@@ -16,7 +16,7 @@ tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list) # Select ticker
 #Side Function
 option = st.sidebar.selectbox('Select one symbol', ( 'AAPL', 'MSFT',"SPY",'WMT'))
 #Heading Info
-tickerData = yf.Ticker(option)
+tickerData = yf.Ticker(ticker_list)
 
 # Ticker information
 string_logo = '<img src=%s>' % tickerData.info['logo_url']
@@ -43,7 +43,7 @@ else:
 ###############
 #Download Data#
 ###############
-df = yf.download(option, start= start_date,end= end_date, progress=False)
+df = yf.download(ticker_list, start= start_date,end= end_date, progress=False)
 #Indicators#
 # Bollinger Bands#
 indicator_bb = BollingerBands(df['Low'])
