@@ -51,6 +51,7 @@ bb = bb[['Low','bb_h','bb_l']]
 
 # Resistence Strength Indicator
 rsi = RSIIndicator(df['Low']).rsi()
+df=df.append(rsi)
 
 ###################
 # Set up main app #
@@ -60,15 +61,15 @@ rsi = RSIIndicator(df['Low']).rsi()
 st.write('Stock Bollinger Bands')
 st.line_chart(bb)
 
-
 progress_bar = st.progress(0)
 
 # Plot RSI
 st.write('Stock RSI ')
 st.line_chart(rsi)
+st.dataframe(rsi.tail(30))
 
 # Data of recent days
 st.write('Recent data ')
 st.dataframe(df.tail(30))
-st.dataframe(rsi.tail(30))
+
 
