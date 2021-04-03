@@ -7,7 +7,6 @@ from ta.trend import MACD
 from ta.momentum import RSIIndicator
 
 ##############
-#Test SideBar#
 # Retrieving tickers data
 ticker_list = pd.read_csv('https://raw.githubusercontent.com/kennethmina24/stockapp/master/List%20of%20Names%20(Stocks)')
 #Heading Info
@@ -56,10 +55,13 @@ rsi = RSIIndicator(df['Low']).rsi()
 # Set up main app #
 ###################
 
+# Data of recent days
+st.write('Recent data ')
+st.dataframe(df.tail(15))
+
 # Plot the prices and the bolinger bands
 st.write('Stock Bollinger Bands')
 st.line_chart(bb)
-
 progress_bar = st.progress(0)
 
 # Plot RSI
@@ -67,8 +69,6 @@ st.write('Stock RSI ')
 st.line_chart(rsi)
 st.dataframe(rsi.tail(7))
 
-# Data of recent days
-st.write('Recent data ')
-st.dataframe(df.tail(30))
+
 
 
