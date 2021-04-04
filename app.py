@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, data, model # import your app modules here
+from apps import stock,NBA # import your app modules here
 
 app = MultiApp()
 
@@ -10,6 +10,6 @@ This multi-page app is using the [streamlit-multiapps](https://github.com/uprane
 """)
 
 # Add all your application here
-app.add_app("Stock", home.app)
+app.add_app("Stock", stock.app)
 app.add_app("NBA", NBA.app)
 # The main a
