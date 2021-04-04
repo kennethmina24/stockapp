@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-#from app import stock.py,NBA.py # import your app modules here
+import stock
 
 #app = MultiApp()
 
