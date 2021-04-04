@@ -1,8 +1,8 @@
 import streamlit as st
 from multiapp import MultiApp
-import stock
+#import stock
 
-#app = MultiApp()
+app = MultiApp()
 
 #st.markdown("""
 # Multi-Page App
