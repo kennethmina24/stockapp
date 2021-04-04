@@ -10,6 +10,6 @@ This multi-page app is using the [streamlit-multiapps](https://github.com/uprane
 """)
 
 # Add all your application here
-app.add_app("Stock", stock.app)
+app.add_app("Stock", stock.py)
 #app.add_app("NBA", NBA.app)
 # The main a
