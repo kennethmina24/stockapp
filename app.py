@@ -11,5 +11,5 @@ This multi-page app is using the [streamlit-multiapps](https://github.com/uprane
 
 # Add all your application here
 app.add_app("Stock", stock)
-#app.add_app("NBA", NBA.app)
+app.add_app("NBA", NBA)
 # The main a
