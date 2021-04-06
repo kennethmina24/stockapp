@@ -8,9 +8,4 @@ class MultiApp:
             "title": title,
             "function": func
         })
-    def run(self):
-        app = st.sidebar.radio(
-            'Go To',
-            self.apps,
-            format_func=lambda app: app['title'])
-        app['function']()
+   
