@@ -10,12 +10,9 @@ from ta.momentum import RSIIndicator
 # Retrieving tickers data
 def app():
     ticker_list = pd.read_csv('https://raw.githubusercontent.com/kennethmina24/stockapp/master/List%20of%20Names%20(Stocks)')
+    #Heading Info
     tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list) # Select ticker symbol
-    tickerData = yf.Ticker(tickerSymbol)
-#ticker_list = pd.read_csv('https://raw.githubusercontent.com/kennethmina24/stockapp/master/List%20of%20Names%20(Stocks)')
-#Heading Info
-#tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list) # Select ticker symbol
-#tickerData = yf.Ticker(tickerSymbol) # Get ticker data
+    tickerData = yf.Ticker(tickerSymbol) # Get ticker data
 
 
 # Ticker information
