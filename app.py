@@ -1,6 +1,6 @@
 import streamlit as st
 import stock,NBA
-import MultiApp as app
+import MultiApp 
 
 
 st.markdown("""
