@@ -2,6 +2,7 @@ import streamlit as st
 import stock,NBA
 from multiapp import MultiApp 
 
+app = MultiApp()
 
 st.markdown("""
 Multi-Page App
