@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def app():
+   leftpanel, rightpanel = st.beta_columns([7, 3])
    leftpanel.title("Player Comparison")
 
    
