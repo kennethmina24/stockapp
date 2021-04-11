@@ -10,7 +10,7 @@ def app():
       selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
       #File Upload
       st.subheader("DataFrame")
-      If data_file is None:
+      If data_file is False:
 	print(Upload File)
       elif:
 	data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
