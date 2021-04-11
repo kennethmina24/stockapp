@@ -8,6 +8,9 @@ def app():
       # Sidebar - Position selection
       unique_pos= ['C','PF','SF','PG','SG']
       selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
+      #File Upload
+      st.subheader("Dataset")
+	data_file = st.file_uploader("Upload CSV",type=['csv'])
 
 
 
