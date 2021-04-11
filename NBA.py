@@ -10,7 +10,7 @@ def app():
       selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
       #File Upload
       st.subheader("DataFrame")
-      #datafile=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
+      datafile=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
       df = pd.read_csv(data_file)
       st.dataframe(df)
       
