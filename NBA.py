@@ -13,7 +13,7 @@ def app():
       data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
       if data_file is None:
             st.write("Enter File")
-      if data is not None:
+      if data_file is not None:
             df = pd.read_csv(data_file)
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
                      #Show Data
