@@ -12,7 +12,7 @@ def app():
       st.subheader("DataFrame")
       #datafile=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
       df = pd.read_csv(data_file)
-	st.dataframe(df)
+      st.dataframe(df)
       
       
 
