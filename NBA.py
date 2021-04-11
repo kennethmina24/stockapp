@@ -11,7 +11,7 @@ def app():
       #File Upload
       st.subheader("DataFrame")
       datafile=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
-      df=pd.read_csv(datafile)
+      
       
 
 
