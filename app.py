@@ -9,7 +9,7 @@ Computer Science-Automate My Life
 """)
 
 # Add all your application here
-app.add_app("Stock", stock.app)
-app.add_app("NBA", NBA.app)
+app.add_app("Stock Market", stock.app)
+app.add_app("DraftKings", NBA.app)
 # The main app
 app.run()
