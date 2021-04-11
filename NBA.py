@@ -6,8 +6,8 @@ import seaborn as sns
 
 def app():
       # Sidebar - Position selection
-unique_pos= ['C','PF','SF','PG','SG']
-selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
+      unique_pos= ['C','PF','SF','PG','SG']
+      selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
 
 
 
