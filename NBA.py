@@ -10,10 +10,10 @@ def app():
       selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
       #File Upload
       st.subheader("DataFrame")
+      data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
       if data_file is None:
             st.write("Enter File)
       if data is not None:
-            data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
             df = pd.read_csv(data_file)
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
                      #Show Data
