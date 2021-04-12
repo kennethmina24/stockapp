@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+
 
 
 def app():
@@ -22,14 +21,7 @@ def app():
                      #Show Data
             st.write(file_details)
             st.dataframe(df)
-              #Exploring Data
-            pr = ProfileReport(df, explorative=True)
-            st.header('**Input DataFrame**')
-            st.write(df)
-            st.write('---')
-            st.header('**Pandas Profiling Report**')
-            st_profile_report(pr)
-    
+            
      
       
       
