@@ -26,7 +26,7 @@ def app():
           return playerstats
       playerstats = load_data(selected_year)
       
-      #data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
+      data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
       if data_file is None:
             st.write("Enter File, the data set is empty")
       if data_file is not None:
