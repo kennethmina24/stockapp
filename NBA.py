@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from streamlit_pandas_profiling import st_profile_report
 
 
 def app():
