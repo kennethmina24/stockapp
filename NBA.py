@@ -22,7 +22,7 @@ def app():
       # Filtering data
       unique_pos= ['C','PF','SF','PG','SG']
       selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)       
-      df_selected_team = playerstats[(df.Pos.isin(selected_pos))]
+      df_selected_team = playerstats[(df.Position.isin(selected_pos))]
       st.dataframe(df_selected_team)
       
       
