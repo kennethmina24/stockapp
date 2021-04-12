@@ -62,7 +62,6 @@ def app():
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
                    #Show Data
             st.write(file_details)
-            st.dataframe(pf)
                      # Filtering data    
             df_updated = pf[(pf.Position.isin(selected_pos))]
             st.dataframe(df_updated)
