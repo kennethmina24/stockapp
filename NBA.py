@@ -22,14 +22,15 @@ def app():
                      #Show Data
             st.write(file_details)
             st.dataframe(df)
-      #Exploring Data
-      pr = ProfileReport(df, explorative=True)
-      st.header('**Input DataFrame**')
-      st.write(df)
-      st.write('---')
-      st.header('**Pandas Profiling Report**')
-      st_profile_report(pr)
-      
+              #Exploring Data
+            pr = ProfileReport(df, explorative=True)
+            st.header('**Input DataFrame**')
+            st.write(df)
+            st.write('---')
+            st.header('**Pandas Profiling Report**')
+            st_profile_report(pr)
+    
+     
       
       
       
