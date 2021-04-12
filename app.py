@@ -4,7 +4,7 @@ from multiapp import MultiApp
 
 app = MultiApp()
 
-st.set_page_config(page_title="ESG")
+st.set_page_config(page_title="Coexist",page_icon="☮️")
 st.markdown("""
 Computer Science-Automate My Life
 """)
