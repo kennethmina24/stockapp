@@ -7,5 +7,5 @@ numpy==1.19.2
 lxml==4.6.1 
 seaborn==0.10.0
 matplotlib
-pandas-profiling==2.10.0
-streamlit-pandas-profiling==0.1.1
+pandas-profiling<2.10.0
+streamlit-pandas-profiling<0.1.1
