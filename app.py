@@ -4,7 +4,7 @@ from multiapp import MultiApp
 
 app = MultiApp()
 
-st.beta_set_page_config(page_title="ESG")
+st.set_page_config(page_title="ESG")
 st.markdown("""
 Computer Science-Automate My Life
 """)
