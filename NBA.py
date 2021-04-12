@@ -8,8 +8,6 @@ import seaborn as sns
 def app():
       # Sidebar - Position selection
       st.title('NBA Player Explorer')
-      unique_pos= ['C','PF','SF','PG','SG']
-      selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)
       #File Upload
       st.subheader("DataFrame")
       data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
@@ -21,8 +19,11 @@ def app():
                      #Show Data
             st.write(file_details)
             st.dataframe(df)
-            
-     
+      # Filtering data
+      unique_pos= ['C','PF','SF','PG','SG']
+      selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)       
+      df_selected_team = playerstats[(df.Pos.isin(selected_pos))]
+      st.dataframe(df_selected_team)
       
       
       
