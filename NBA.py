@@ -18,7 +18,7 @@ def app():
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
                      #Show Data
             st.write(file_details)
-            st.dataframe(df)
+            #st.dataframe(df)
                      # Filtering data
             unique_pos= ['C','PF','SF','PG','SG']
             selected_pos= st.sidebar.multiselect('Position', unique_pos, unique_pos)       
