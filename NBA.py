@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pandas_profiling import ProfileReport
-
+from streamlit_pandas_profiling import st_profile_report
 
 
 def app():
