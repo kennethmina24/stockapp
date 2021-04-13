@@ -47,7 +47,7 @@ def app():
     bb['bb_h'] = indicator_bb.bollinger_hband()
     bb['bb_l'] = indicator_bb.bollinger_lband()
     bb = bb[['Low','bb_h','bb_l']]
-    bb=bb.dropna
+    bb=bb.tail(10)
 
     # Resistence Strength Indicator
     rsi = RSIIndicator(df['Low']).rsi()
