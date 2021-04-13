@@ -71,6 +71,6 @@ def app():
     ###################
     # Data of recent days
     # Plot the prices and the bolinger bands
-    st.write('Stock Bollinger Bands')
+    st.write('Recent Data')
     st.dataframe(bb)
     progress_bar = st.progress(0)
