@@ -60,6 +60,7 @@ def app():
      final_list.append(-1)
     else:
      final_list.append(0)
+    st.write('Stock RSI ')
     st.dataframe(final_list)
 
     ###################
