@@ -47,6 +47,7 @@ def app():
     bb['bb_h'] = indicator_bb.bollinger_hband()
     bb['bb_l'] = indicator_bb.bollinger_lband()
     bb = bb[['Low','bb_h','bb_l']]
+    bb=bb.dropna
 
     # Resistence Strength Indicator
     rsi = RSIIndicator(df['Low']).rsi()
@@ -68,11 +69,7 @@ def app():
     ###################
     # Set up main app #
     ###################
-
     # Data of recent days
-    st.write('Recent data ')
-    st.dataframe(df.tail(15))
-
     # Plot the prices and the bolinger bands
     st.write('Stock Bollinger Bands')
     st.dataframe(bb)
