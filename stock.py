@@ -50,6 +50,17 @@ def app():
 
     # Resistence Strength Indicator
     rsi = RSIIndicator(df['Low']).rsi()
+    RSI=rsi.tail(1)
+    #Funcation of RSI
+    RSI = float(RSI)
+    final_list=[]
+    if RSI < 45:
+     final_list.append(1)
+    elif RSI > 55:
+     final_list.append(-1)
+    else:
+     final_list.append(0)
+    r.randint(-1,1)
 
     ###################
     # Set up main app #
