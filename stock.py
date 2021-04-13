@@ -60,8 +60,10 @@ def app():
      final_list.append(-1)
     else:
      final_list.append(0)
+     # Plot RSI
     st.write('Stock RSI ')
     st.dataframe(final_list)
+    st.dataframe(rsi.tail(7))
 
     ###################
     # Set up main app #
@@ -73,12 +75,5 @@ def app():
 
     # Plot the prices and the bolinger bands
     st.write('Stock Bollinger Bands')
-    st.line_chart(bb)
+    st.dataframe(bb)
     progress_bar = st.progress(0)
-
-    # Plot RSI
-    st.write('Stock RSI ')
-    st.line_chart(rsi)
-    st.dataframe(rsi.tail(7))
-
-
