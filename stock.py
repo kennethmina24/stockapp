@@ -61,6 +61,7 @@ def app():
     else:
      final_list.append(0)
     r.randint(-1,1)
+    st.chart(final_list)
 
     ###################
     # Set up main app #
