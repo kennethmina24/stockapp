@@ -60,7 +60,7 @@ def app():
      final_list.append(-1)
     else:
      final_list.append(0)
-    st.chart(final_list)
+    st.dataframe(final_list)
 
     ###################
     # Set up main app #
