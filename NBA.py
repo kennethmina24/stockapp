@@ -21,8 +21,8 @@ def app():
           raw = df.drop(df[df.Age == 'Age'].index) # Deletes repeating headers in content
           raw = raw.fillna(0)
           playerstats = raw.drop(['Rk','Age','G','GS'], axis=1)
-          playerstats=playerstats.rename(columns={'Player':'Name'})
-          playerstats=playerstats.drop_duplicates(subset=(['Name']))
+          #playerstats=playerstats.rename(columns={'Player':'Name'})
+          #playerstats=playerstats.drop_duplicates(subset=(['Name']))
           return playerstats
       playerstats = load_data(selected_year)
       
@@ -68,7 +68,7 @@ def app():
             st.write(file_details)
                      # Filtering data    
             #pf=pf.groupby('Name')
-            df_updated = pf[(pf.Pos.isin(selected_pos))
+            #df_updated = pf[(pf.Pos.isin(selected_pos))
             
             #st.dataframe(df_updated)
             #Combine List
