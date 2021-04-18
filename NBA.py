@@ -21,7 +21,7 @@ def app():
           raw = df.drop(df[df.Age == 'Age'].index) # Deletes repeating headers in content
           raw = raw.fillna(0)
           playerstats = raw.drop(['Rk','Age','G','GS'], axis=1)
-          #playerstats=playerstats.rename(columns={'Player':'Name'})
+          playerstats=playerstats.rename(columns={'Player':'Name'})
           #playerstats=playerstats.drop_duplicates(subset=(['Name']))
           return playerstats
       playerstats = load_data(selected_year)
