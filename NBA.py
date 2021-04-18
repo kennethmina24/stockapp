@@ -72,7 +72,7 @@ def app():
             
             #st.dataframe(df_updated)
             #Combine List
-            Combined_DK_Website=pd.concat([pf,playerstats])
+            Combined_DK_Website=pd.merge([pf,playerstats],how="outer")
             
             st.dataframe(Combined_DK_Website)
        
