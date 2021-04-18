@@ -67,7 +67,12 @@ def app():
             st.write(file_details)
                      # Filtering data    
             df_updated = pf[(pf.Position.isin(selected_pos))]
-            st.dataframe(df_updated)
+            
+            #st.dataframe(df_updated)
+            #Combine List
+        Combined_DK_Website=pd.concat([df_updated,playerstats])
+        st.dataframe(Combined_DK_Website)
+       
       
       
       
