@@ -20,7 +20,7 @@ def app():
           df = html[0]
           raw = df.drop(df[df.Age == 'Age'].index) # Deletes repeating headers in content
           raw = raw.fillna(0)
-          playerstats = raw.drop(['Rk'], axis=1)
+          playerstats = raw.drop(['Rk','Age'], axis=1)
           return playerstats
       playerstats = load_data(selected_year)
       
