@@ -67,7 +67,7 @@ def app():
                    #Show Data
             st.write(file_details)
                      # Filtering data    
-            pf=pf.groupby(by='Name').sum()
+            #pf=pf.groupby(by='Name').sum()
             #pf= pf[(pf.Pos.isin(selected_pos))]
             
             #st.dataframe(df_updated)
