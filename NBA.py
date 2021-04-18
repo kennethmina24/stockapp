@@ -73,6 +73,7 @@ def app():
             #st.dataframe(df_updated)
             #Combine List
             Combined_DK_Website=pd.concat([pf,playerstats])
+            Combined_DK_Website=Combined_DK_Website.dropna
             st.dataframe(Combined_DK_Website)
        
       
