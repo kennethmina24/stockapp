@@ -68,7 +68,7 @@ def app():
             st.write(file_details)
                      # Filtering data    
             pf=pf.groupby('Name')
-            #df_updated = pf[(pf.Pos.isin(selected_pos))
+            df_updated = pf[(pf.Pos.isin(selected_pos))]
             
             #st.dataframe(df_updated)
             #Combine List
