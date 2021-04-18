@@ -62,11 +62,12 @@ def app():
             pf = pd.read_csv(data_file)
             pf=pf.drop(columns=['TeamAbbrev','Name + ID','Roster Position','Game Info'])
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
-           
+            pf=pf.rename(columns={'Position':'Pos'})
                    #Show Data
             st.write(file_details)
                      # Filtering data    
-            df_updated = pf[(pf.Position.isin(selected_pos))]
+  
+            df_updated = pf[(pf.Pos.isin(selected_pos))]
             
             #st.dataframe(df_updated)
             #Combine List
