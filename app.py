@@ -1,5 +1,6 @@
 import streamlit as st
-import stock,NBA
+import stock
+#nba
 from multiapp import MultiApp 
 
 app = MultiApp()
