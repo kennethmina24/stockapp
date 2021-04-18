@@ -22,7 +22,7 @@ def app():
           raw = raw.fillna(0)
           playerstats = raw.drop(['Rk','Age','G','GS'], axis=1)
           playerstats=playerstats.rename(columns={'Player':'Name'})
-          playerstats=playerstats.drop_duplicates(subset=['Pos'])
+          playerstats=playerstats.drop_duplicates(subset=(['Name']))
           return playerstats
       playerstats = load_data(selected_year)
       
