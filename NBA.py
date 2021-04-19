@@ -72,7 +72,7 @@ def app():
             
             #st.dataframe(df_updated)
             #Combine List
-            Combined_DK_Website=pf.merge(df_selected_team,how="outer",right="Name")
+            Combined_DK_Website=pf.groupby('Salary', as_index=True).last()
             
             st.dataframe(Combined_DK_Website)
        
