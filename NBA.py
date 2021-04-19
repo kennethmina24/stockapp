@@ -72,7 +72,7 @@ def app():
             
             #st.dataframe(df_updated)
             #Combine List
-            Combined_DK_Website=pf.groupby('Salary', as_index=True).last()
+            Combined_DK_Website=pd.concat([pf,playerstats])
             
             st.dataframe(Combined_DK_Website)
        
