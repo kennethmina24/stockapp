@@ -61,7 +61,7 @@ def app():
             st.write("Enter File, the data set is empty")
       if data_file is not None:
             pf = pd.read_csv(data_file)
-            pf=pf.drop(columns=['TeamAbbrev','Name + ID','Game Info','Pos_x'])
+            pf=pf.drop(columns=['TeamAbbrev','Name + ID','Game Info','Roster Position'])
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
             pf=pf.rename(columns={'Position':'Pos'})
                    #Show Data
