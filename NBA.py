@@ -70,6 +70,7 @@ def app():
             #Combine List
             Combined_DK_Website=pf.merge( df_selected_team,how='outer',on='Name')
             Combined_DK_Website=Combined_DK_Website.drop(columns= ['Pos_x'])
+            Combined_DK_Website=Combined_DK_Website.fillna(0)
            
             
             st.dataframe(Combined_DK_Website)
