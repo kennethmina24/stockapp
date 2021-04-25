@@ -82,7 +82,7 @@ def app():
             selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 
             # Filtering data
-            Combined_DK_Website = Combined_DK_Website[(Combined_DK_Website.Tm.isin(selected_team)) & (Combined_DK_Website.Pos.isin(selected_pos))]
+            Combined_DK_Website = Combined_DK_Website[(Combined_DK_Website.Tm.isin(selected_team)) & (Combined_DK_Website.Pos_y.isin(selected_pos))]
 
             #st.header('Display Player Stats of Selected Team(s)')
             #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
