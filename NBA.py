@@ -72,7 +72,7 @@ def app():
             Combined_DK_Website=Combined_DK_Website.drop(columns= ['Pos_x'])
             Combined_DK_Website=Combined_DK_Website.dropna(subset=['Salary'])
             Combined_DK_Website=Combined_DK_Website.fillna(0)
-             Sidebar - Team selection
+             #Sidebar - Team selection
             sorted_unique_team_1 = sorted(Combined_DK_Website.Tm.unique())
             selected_team_1 = st.sidebar.multiselect('Team', sorted_unique_team_1, sorted_unique_team_1)
 
