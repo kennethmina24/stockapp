@@ -67,7 +67,7 @@ def app():
              # Heatmap
             if st.button('Intercorrelation Heatmap'):
                   st.header('Intercorrelation Matrix Heatmap')
-                  Combined_DK_Website.to_csv('output.csv',index=False)
+                  playerstats.to_csv('output.csv',index=False)
                   df = pd.read_csv('output.csv')
                   corr = df.corr()
                   mask = np.zeros_like(corr)
