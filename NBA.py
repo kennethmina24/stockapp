@@ -27,33 +27,33 @@ def app():
       playerstats = load_data(selected_year)
       
       # Sidebar - Team selection
-      sorted_unique_team = sorted(playerstats.Tm.unique())
+      #sorted_unique_team = sorted(playerstats.Tm.unique())
       selected_team = st.sidebar.multiselect('Team', sorted_unique_team, sorted_unique_team)
 
       # Sidebar - Position selection
-      unique_pos = ['C','PF','SF','PG','SG']
-      selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
+      #unique_pos = ['C','PF','SF','PG','SG']
+      #selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 
       # Filtering data
-      df_selected_team = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_pos))]
+      #df_selected_team = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_pos))]
 
       st.header('Display Player Stats of Selected Team(s)')
-      st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
-      st.dataframe(df_selected_team)
+      #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
+      st.dataframe(playerstats)
       # Heatmap
-      if st.button('Intercorrelation Heatmap'):
-            st.header('Intercorrelation Matrix Heatmap')
-            df_selected_team.to_csv('output.csv',index=False)
-            df = pd.read_csv('output.csv')
+      #if st.button('Intercorrelation Heatmap'):
+            #st.header('Intercorrelation Matrix Heatmap')
+            #df_selected_team.to_csv('output.csv',index=False)
+            #df = pd.read_csv('output.csv')
 
-            corr = df.corr()
-            mask = np.zeros_like(corr)
-            mask[np.triu_indices_from(mask)] = True
-            with sns.axes_style("white"):
-                  f, ax = plt.subplots(figsize=(7, 5))
-                  ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            st.pyplot()
+            #corr = df.corr()
+            #mask = np.zeros_like(corr)
+            #mask[np.triu_indices_from(mask)] = True
+            #with sns.axes_style("white"):
+             #     f, ax = plt.subplots(figsize=(7, 5))
+              #    ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
+            #st.set_option('deprecation.showPyplotGlobalUse', False)
+            #st.pyplot()
 
       
       data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
@@ -78,11 +78,11 @@ def app():
             selected_team_1 = st.sidebar.multiselect('Team', sorted_unique_team_1, sorted_unique_team_1)
 
             # Sidebar - Position selection
-            #unique_pos = ['C','PF','SF','PG','SG']
-            #selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
+            unique_pos = ['C','PF','SF','PG','SG','Empty']
+            selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 
             # Filtering data
-            #df_selected_team = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_pos))]
+            Combined_DK_Website = Combined_DK_Website[(Combined_DK_Website.Tm.isin(selected_team)) & (Combined_DK_Website.Pos.isin(selected_pos))]
 
             #st.header('Display Player Stats of Selected Team(s)')
             #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
