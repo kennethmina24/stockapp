@@ -9,3 +9,4 @@ seaborn==0.10.0
 matplotlib
 pandas-profiling<2.10.0
 streamlit-pandas-profiling<0.1.1
+nba-api<1.1.9
