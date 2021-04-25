@@ -51,21 +51,9 @@ def app():
 
     # Resistence Strength Indicator
     rsi = RSIIndicator(df['Low']).rsi()
-    RSI=rsi.tail(1)
-    #Funcation of RSI
-    RSI = float(RSI)
-    final_list=[]
-    if RSI < 45:
-     final_list.append(1)
-    elif RSI > 55:
-     final_list.append(-1)
-    else:
-     final_list.append(0)
      # Plot RSI
     st.header('Stock RSI ')
-    st.write("ATraditionally the RSI is considered overbought when above 70 and oversold when below 30")
-    st.dataframe(final_list)
-    
+    st.write("Overbought(Selling Pressure) above 70 /// Oversold(Buying Pressure) below 30")
     st.dataframe(rsi.tail(3))
 
     ###################
