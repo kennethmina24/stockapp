@@ -64,6 +64,7 @@ def app():
             pf=pf.drop(columns=['TeamAbbrev','Name + ID','Game Info','Roster Position','ID'])
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
             pf=pf.rename(columns={'Position':'Pos'})
+            pf=pf.rename(columns={'TeamAbbrev':'Tm'})
                    #Show Data
             st.write(file_details)
                      # Filtering data    
