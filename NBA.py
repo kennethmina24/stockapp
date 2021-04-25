@@ -74,8 +74,8 @@ def app():
             Combined_DK_Website=Combined_DK_Website.dropna(subset=['Salary'])
             Combined_DK_Website=Combined_DK_Website.fillna("Empty")
              #Sidebar - Team selection
-            sorted_unique_team_1 = sorted(Combined_DK_Website.Tm.unique())
-            selected_team = st.sidebar.multiselect('Team', sorted_unique_team_1, sorted_unique_team_1)
+            sorted_unique_team = sorted(Combined_DK_Website.Tm.unique())
+            selected_team = st.sidebar.multiselect('Team', sorted_unique_team, sorted_unique_team)
 
             # Sidebar - Position selection
             unique_pos = ['C','PF','SF','PG','SG','Empty']
