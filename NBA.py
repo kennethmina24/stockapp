@@ -72,9 +72,20 @@ def app():
             Combined_DK_Website=Combined_DK_Website.drop(columns= ['Pos_x'])
             Combined_DK_Website=Combined_DK_Website.dropna(subset=['Salary'])
             Combined_DK_Website=Combined_DK_Website.fillna(0)
+             Sidebar - Team selection
+            sorted_unique_team_1 = sorted(Combined_DK_Website.Tm.unique())
+            selected_team_1 = st.sidebar.multiselect('Team', sorted_unique_team_1, sorted_unique_team_1)
 
-           
-            
+            # Sidebar - Position selection
+            #unique_pos = ['C','PF','SF','PG','SG']
+            #selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
+
+            # Filtering data
+            #df_selected_team = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_pos))]
+
+            #st.header('Display Player Stats of Selected Team(s)')
+            #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
+            #st.dataframe(df_selected_team)
             st.dataframe(Combined_DK_Website)
        
       
