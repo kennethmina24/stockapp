@@ -63,8 +63,7 @@ def app():
      final_list.append(0)
      # Plot RSI
     st.header('Stock RSI ')
-    st.write(
-        "At the money= 1// Strike -1= // 0 Strike -2 = -1"
+    st.write("At the money= 1// Strike -1= // 0 Strike -2 = -1")
     st.dataframe(final_list)
     
     st.dataframe(rsi.tail(7))
