@@ -77,7 +77,7 @@ def app():
                         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
                         st.set_option('deprecation.showPyplotGlobalUse', False)
                         st.pyplot()
-             !pip install selenium bs4
+             
        
       
       
