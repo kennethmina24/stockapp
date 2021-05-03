@@ -11,7 +11,7 @@ def app():
       st.subheader("DataFrame")
       # Web scraping of NBA player stats
       @st.cache
-      def load_data(year):
+      def load_data():
           url = "https://www.basketball-reference.com/leagues/NBA_2021_per_game.html"
           html = pd.read_html(url, header = 0)
           df = html[0]
@@ -21,7 +21,7 @@ def app():
           playerstats=playerstats.rename(columns={'Player':'Name'})
           playerstats=playerstats.drop_duplicates(subset=(['Name']))
           return playerstats
-      playerstats = load_data(selected_year)
+      playerstats = load_data()
       # Filtering data
       st.header('Display Player Stats of Selected Team(s)')
       #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
