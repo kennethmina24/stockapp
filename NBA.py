@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import NBA_Players_Names as replace
 
 def app():
       # Sidebar - Position selection
