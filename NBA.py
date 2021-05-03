@@ -56,7 +56,7 @@ def app():
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
             pf=pf.rename(columns={'Position':'Pos'})
             pf=pf.rename(columns={'TeamAbbrev':'Tm'})
-            pf["Name"] = playerstats["Name"].str.replace("II", " ")
+            pf["Name"] = pf["Name"].str.replace("II", " ")
                    #Show Data
             st.write(file_details)
                      # Filtering data    
