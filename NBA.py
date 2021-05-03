@@ -21,6 +21,9 @@ def app():
           playerstats=playerstats.rename(columns={'Player':'Name'})
           playerstats=playerstats.drop_duplicates(subset=(['Name']))
           playerstats["Name"] = playerstats["Name"].str.replace("ć", "c")
+          playerstats["Name"] = playerstats["Name"].str.replace("é", "e")
+          playerstats["Name"] = playerstats["Name"].str.replace("ö", "o")
+          playerstats["Name"] = playerstats["Name"].str.replace("Š", "s")
           return playerstats
       playerstats = load_data()
       # Filtering data
