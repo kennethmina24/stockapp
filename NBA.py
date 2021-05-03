@@ -30,6 +30,7 @@ def app():
           playerstats["Name"] = playerstats["Name"].str.replace("ó", "o")
           playerstats["Name"] = playerstats["Name"].str.replace("ņ", "n")
           playerstats["Name"] = playerstats["Name"].str.replace("ģ", "g")
+          playerstats["Name"] = playerstats["Name"].str.replace("ā", "a")
           return playerstats
       playerstats = load_data()
       # Filtering data
