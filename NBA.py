@@ -20,7 +20,7 @@ def app():
           playerstats = raw.drop(['Rk','Age','G','GS'], axis=1)
           playerstats=playerstats.rename(columns={'Player':'Name'})
           playerstats=playerstats.drop_duplicates(subset=(['Name']))
-          playerstats["Name"] = playerstats["Name"].str.replace("ć", "3")
+          playerstats["Name"] = playerstats["Name"].str.replace("ć", "c")
           return playerstats
       playerstats = load_data()
       # Filtering data
