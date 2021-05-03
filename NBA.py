@@ -9,13 +9,10 @@ def app():
       st.title('NBA Player Explorer')
       #File Upload
       st.subheader("DataFrame")
-      st.sidebar.header('User Input Features')
-      selected_year = st.sidebar.selectbox('Year', list(reversed(range(2019,2021))))
-
       # Web scraping of NBA player stats
       @st.cache
       def load_data(year):
-          url = "https://www.basketball-reference.com/leagues/NBA_" + str(year) + "_per_game.html"
+          url = "https://www.basketball-reference.com/leagues/NBA_2021_per_game.html"
           html = pd.read_html(url, header = 0)
           df = html[0]
           raw = df.drop(df[df.Age == 'Age'].index) # Deletes repeating headers in content
