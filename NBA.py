@@ -38,6 +38,7 @@ def app():
           playerstats["Name"] = playerstats["Name"].str.replace("ā", "a")
           playerstats["Name"] = playerstats["Name"].str.replace("Č", "C")
           playerstats["Name"] = playerstats["Name"].str.replace("İ", "I")
+          playerstats["Pos"] = playerstats["Pos"].str.replace("SF-SG", "SG")
           playerstats=playerstats.replace({'Name':replace_values})
     
             
