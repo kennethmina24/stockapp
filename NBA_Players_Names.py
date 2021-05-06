@@ -1,4 +1,4 @@
-replace_values={'Danuel House':'Danuel House Jr.','Sviatoslav Mykhailiuk' :'Svi Mykhailiuk',inplace=True} 
+replace_values={'Danuel House':'Danuel House Jr.','Sviatoslav Mykhailiuk' :'Svi Mykhailiuk'} 
 
 #,'Sviatoslav Mykhailiuk':'Svi Mykhailiuk'
 
