@@ -2,6 +2,7 @@ replace_values={'Danuel House':'Danuel House Jr.',
                 'Kenyon Martin Jr.' :'KJ Martin Jr.',
                 'JaKarr Sampson':'Jakarr Sampson',
                 'Brian Bowen':'Brian Bowen II',
+                'Sviatoslav Mykhailiuk':'Svi Mykhailiuk'
                } 
 
 #,'Sviatoslav Mykhailiuk':'Svi Mykhailiuk'
