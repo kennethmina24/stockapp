@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
-import NBA_Players_Names as replace
+import NBA_Players_Names 
 
 def app():
       # Sidebar - Position selection
@@ -38,7 +38,7 @@ def app():
           playerstats["Name"] = playerstats["Name"].str.replace("ā", "a")
           playerstats["Name"] = playerstats["Name"].str.replace("Č", "C")
           playerstats["Name"] = playerstats["Name"].str.replace("İ", "I")
-          playerstats=playerstats.replace({'Name':replace})
+          playerstats=playerstats.replace({'Name':replace_values})
             
             
           return playerstats
