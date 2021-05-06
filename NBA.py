@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
-import NBA_Players_Names 
+from NBA_Players_Names import replace_values 
 
 def app():
       # Sidebar - Position selection
