@@ -71,7 +71,7 @@ def app():
             #Combined_DK_Website['Points/Minutes']=Combined_DK_Website['AvgPointsPerGame']/Combined_DK_Website['MP']
             #df['Salary'] = df.Salary.astype(float)
             x=Combined_DK_Website.dtypes
-            st.dataframes(x)
+            st.dataframe(x)
             Combined_DK_Website = Combined_DK_Website[Combined_DK_Website.Name !='Udonis Haslem' ]
              #Sidebar - Team selection
             sorted_unique_team = sorted(Combined_DK_Website.Tm.unique())
