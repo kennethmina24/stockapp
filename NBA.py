@@ -67,7 +67,7 @@ def app():
             Combined_DK_Website=pf.merge( playerstats,how='outer',on='Name')
             Combined_DK_Website=Combined_DK_Website.drop(columns= ['Pos_x'])
             Combined_DK_Website=Combined_DK_Website.dropna(subset=['Salary'])
-            Combined_DK_Website=Combined_DK_Website.fillna('0')
+            Combined_DK_Website=Combined_DK_Website.fillna('Empty')
             #Combined_DK_Website['Points/Minutes']=Combined_DK_Website['AvgPointsPerGame']/Combined_DK_Website['MP']
             #Combined_DK_Website = Combined_DK_Website[Combined_DK_Website.Name !='Russell Westbrook' ]
              #Sidebar - Team selection
