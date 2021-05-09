@@ -68,7 +68,7 @@ def app():
             Combined_DK_Website=Combined_DK_Website.drop(columns= ['Pos_x'])
             Combined_DK_Website=Combined_DK_Website.dropna(subset=['Salary'])
             Combined_DK_Website=Combined_DK_Website.fillna('Empty')
-            #Combined_DK_Website['Points/Minutes']=Combined_DK_Website['AvgPointsPerGame']/Combined_DK_Website['MP']
+            Combined_DK_Website['Points/Minutes']=Combined_DK_Website['AvgPointsPerGame']/Combined_DK_Website['MP']
             Combined_DK_Website = Combined_DK_Website[Combined_DK_Website.Name !='Udonis Haslem' ]
              #Sidebar - Team selection
             sorted_unique_team = sorted(Combined_DK_Website.Tm.unique())
