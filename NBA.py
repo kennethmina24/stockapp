@@ -69,7 +69,7 @@ def app():
             Combined_DK_Website=Combined_DK_Website.dropna(subset=['Salary'])
             Combined_DK_Website=Combined_DK_Website.fillna('Empty')
             #Combined_DK_Website['Points/Minutes']=Combined_DK_Website['AvgPointsPerGame']/Combined_DK_Website['MP']
-            #df['Salary'] = df.Salary.astype(float)
+            Combined_DK_Website['MP'] =  Combined_DK_Website.MP.astype(float)
             x=Combined_DK_Website.dtypes
             st.dataframe(x)
             Combined_DK_Website = Combined_DK_Website[Combined_DK_Website.Name !='Udonis Haslem' ]
