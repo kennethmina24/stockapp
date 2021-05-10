@@ -122,13 +122,13 @@ def app():
 
             #API Object
             api=tweepy.API(auth,wait_on_rate_limit=True)
-            
+           
             st.title('Sentiment Analysis of a users tweets')
             st.markdown('Enter user and number of tweets')
             twitterAccount = st.text_input('Twitter User','FantasyLabsNBA')
             n = int(st.text_input('Number of tweets','50'))
             
-            tweets = tweepy.Cursor(twetterApi.user_timeline, 
+            tweets = tweepy.Cursor(api.user_timeline, 
                     screen_name=twitterAccount, 
                     count=None,
                     since_id=None,
