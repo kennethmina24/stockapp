@@ -93,7 +93,6 @@ def app():
             #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
             #st.dataframe(df_selected_team)
             st.dataframe(Combined_DK_Website)
-            st.title('Sentiment Analysis of a users tweets')
             
              # Heatmap
             if st.button('Intercorrelation Heatmap'):
@@ -126,8 +125,22 @@ def app():
             
             st.title('Sentiment Analysis of a users tweets')
             st.markdown('Enter user and number of tweets')
-            twitterAccount = st.text_input('Twitter User','elonmusk')
+            twitterAccount = st.text_input('Twitter User','FantasyLabsNBA')
             n = int(st.text_input('Number of tweets','50'))
+            
+            tweets = tweepy.Cursor(twetterApi.user_timeline, 
+                    screen_name=twitterAccount, 
+                    count=None,
+                    since_id=None,
+                    max_id=None,
+                    trim_user=True,
+                    exclude_replies=True,
+                    contributor_details=False,
+                    include_entities=False
+                    ).items(n);
+
+            sa = pd.DataFrame(data=[tweet.text for tweet in tweets], columns=['Tweet'])
+            st.dataframe(sa)
 
 
 
