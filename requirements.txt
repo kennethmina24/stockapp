@@ -10,6 +10,6 @@ matplotlib
 pandas-profiling<2.10.0
 streamlit-pandas-profiling<0.1.1
 tweepy<3.10.0
-re<2.2.1
+#re<2.2.1
 json<2.0.9
 
