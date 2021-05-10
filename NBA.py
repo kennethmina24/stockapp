@@ -125,6 +125,17 @@ def app():
 
             #API Object
             api=tweepy.API(auth,wait_on_rate_limit=True)
+            
+            # Extract
+            posts=api.user_timeline(screen_name= 'FantasyLabsNBA', count=100, lang= 'en', tweet_mode= 'extended')
+
+            #Print the last 5 tweets from account
+
+            print('show the 5 recent tweets: \n')
+            i=1
+            for tweet in posts[0:]:
+             print(str(i) + ')  ' + tweet.full_text +'\n')
+             i=i+1
 
 
 
