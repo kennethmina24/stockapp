@@ -143,17 +143,7 @@ def app():
             sa = pd.DataFrame(data=[tweet.text for tweet in tweets], columns=['Tweet'])
             st.dataframe(sa)
             
-            def cleantxt(text):
-                  text=re.sub(r'@[A-Za-z0-9]+','',text)
-                  text=re.sub(r'#','',text)
-                  text=re.sub(r'RT[\s]+','',text)
-                  text=re.sub(r'https?:\/\/\S+','',text)
-
-            return text
-                  #Clean Text
-            sa['Tweet']=sa['Tweet'].apply(cleantxt)
-            st.dataframe(sa)
-
+           
 
 
 
