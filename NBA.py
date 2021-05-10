@@ -72,7 +72,7 @@ def app():
             Combined_DK_Website['MP'] =  Combined_DK_Website.MP.astype(float)
             Combined_DK_Website['Points/Minutes']=Combined_DK_Website['AvgPointsPerGame']/Combined_DK_Website['MP']
             titles=list(Combined_DK_Website.columns)
-            titles[1],titles[8]= titles[8],titles[1]
+            titles[1],titles[27]= titles[27],titles[1]
             Combined_DK_Website=Combined_DK_Website[titles]
             x=Combined_DK_Website.dtypes
             st.dataframe(x)
