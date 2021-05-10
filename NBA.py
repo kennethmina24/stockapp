@@ -107,7 +107,26 @@ def app():
                         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
                         st.set_option('deprecation.showPyplotGlobalUse', False)
                         st.pyplot()
+                        
+                 #Twitter
+            API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
+            API_secret='owHXRfmvCzDCy2wBWERQpwanz6cq6qokuzmUd1jnqsNCtOLxpD'
+            Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
+            Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
+            #Step 2
+            #Authenication Object
+            auth=tweepy.OAuthHandler(API_Key,API_secret)
+
+            # Set the access
+            auth.set_access_token(Access_key,Access_secret)
+
+            #API Object
+            api=tweepy.API(auth,wait_on_rate_limit=True)
             
+            st.title('Sentiment Analysis of a users tweets')
+            st.markdown('Enter user and number of tweets')
+            twitterAccount = st.text_input('Twitter User','elonmusk')
+            n = int(st.text_input('Number of tweets','50'))
 
 
 
