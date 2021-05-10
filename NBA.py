@@ -93,6 +93,7 @@ def app():
             #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
             #st.dataframe(df_selected_team)
             st.dataframe(Combined_DK_Website)
+            st.title('Sentiment Analysis of a users tweets')
             
              # Heatmap
             if st.button('Intercorrelation Heatmap'):
