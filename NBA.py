@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import tweepy
 from NBA_Players_Names import replace_values 
 
 def app():
@@ -106,11 +107,20 @@ def app():
                         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
                         st.set_option('deprecation.showPyplotGlobalUse', False)
                         st.pyplot()
-             
-       
-      
-      
-      
+            #Tweeter
+            #Consumer, Access API keys
+            API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
+
+            API_secret='owHXRfmvCzDCy2wBWERQpwanz6cq6qokuzmUd1jnqsNCtOLxpD'
+
+            Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
+
+            Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
+
+
+
+
+
 
 
 
