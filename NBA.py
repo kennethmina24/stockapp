@@ -107,46 +107,7 @@ def app():
                         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
                         st.set_option('deprecation.showPyplotGlobalUse', False)
                         st.pyplot()
-            #Tweeter
-            #Consumer, Access API keys
-            API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
-
-            API_secret='owHXRfmvCzDCy2wBWERQpwanz6cq6qokuzmUd1jnqsNCtOLxpD'
-
-            Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
-
-            Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
             
-                        #Authenication Object
-            auth=tweepy.OAuthHandler(API_Key,API_secret)
-
-            # Set the access
-            auth.set_access_token(Access_key,Access_secret)
-
-            #API Object
-            api=tweepy.API(auth,wait_on_rate_limit=True)
-            
-            # Extract
-            posts=api.user_timeline(screen_name= 'FantasyLabsNBA', count=100, lang= 'en', tweet_mode= 'extended')
-
-            #Print the last 5 tweets from account
-
-            print('show the 5 recent tweets: \n')
-            i=1
-            for tweet in posts[0:]:
-             print(str(i) + ')  ' + tweet.full_text +'\n')
-             i=i+1
-                  
-            sa= pd.DataFrame( [tweet.full_text for tweet in posts], columns =['Tweets'])
-            st.dataframe(sa)
-
-
-
-
-
-
-
-
 
 
 
