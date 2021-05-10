@@ -116,6 +116,15 @@ def app():
             Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
 
             Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
+            
+                        #Authenication Object
+            auth=tweepy.OAuthHandler(API_Key,API_secret)
+
+            # Set the access
+            auth.set_access_token(Access_key,Access_secret)
+
+            #API Object
+            api=tweepy.API(auth,wait_on_rate_limit=True)
 
 
 
