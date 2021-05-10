@@ -136,7 +136,9 @@ def app():
             for tweet in posts[0:]:
              print(str(i) + ')  ' + tweet.full_text +'\n')
              i=i+1
-
+                  
+            sa= pd.DataFrame( [tweet.full_text for tweet in posts], columns =['Tweets'])
+            st.dataframe(sa)
 
 
 
