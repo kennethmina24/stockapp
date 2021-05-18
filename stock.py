@@ -24,12 +24,7 @@ def app():
     string_summary = tickerData.info['longBusinessSummary']
     st.info(string_summary)
     
-        # Function to display values and their names
-    import yahoo_fin.stock_info as si
-    tsla_data = si.get_quote_table(tickerSymbol)
-
-    st.dataframe(tsla_data)
-
+        # Function to display values and their name
 #########################
   #def display_summary(tickerSymbol):
    # info = get_info(tickerSymbol)
