@@ -28,7 +28,7 @@ def app():
     import yahoo_fin.stock_info as si
     tsla_data = si.get_quote_table(tickerSymbol)
 
-    tsla_data
+    st.dataframe(tsla_data)
 
 #########################
   #def display_summary(tickerSymbol):
