@@ -25,20 +25,24 @@ def app():
     st.info(string_summary)
     
         # Function to display values and their names
-  def display_summary(tickerSymbol):
-    info = get_info(tickerSymbol)
-    info_names = ["Name: ", "Close Price: ", "Open Price: ", "52-Week Range: ", "Dividend Rate & Yield: ", \
-            "Market Cap: ", "PE Ratio: ", "EPS: "]
+    import yahoo_fin.stock_info as si
+    tsla_data = si.get_quote_table(tickerSymbol)
+
+    tsla_data
+
+#########################
+  #def display_summary(tickerSymbol):
+   # info = get_info(tickerSymbol)
+    #info_names = ["Name: ", "Close Price: ", "Open Price: ", "52-Week Range: ", "Dividend Rate & Yield: ", \
+            #"Market Cap: ", "PE Ratio: ", "EPS: "]
         # print out info in sidebar
-    for name,infoValue in zip(info_names, info):
-        row = \
-            f"""<div> 
-                    <span style='float: left;'><b>{name}</b></span>
-                    <span style='float: right;'> {infoValue}</span>
-                </div>
-            """
-        st.sidebar.markdown(row, unsafe_allow_html=True)
-        st.sidebar.markdown("---")
+    #for name,infoValue in zip(info_names, info):
+     #   row = \
+      #      f"""<div> 
+       #             <span style='float: left;'><b>{name}</b></span>
+        #            <span style='float: right;'> {infoValue}</span>
+        #        </div>
+ 
 
     ###########
     # sidebar #
