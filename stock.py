@@ -25,7 +25,7 @@ def app():
     st.info(string_summary)
     
         # Function to display values and their names
-    def display_summary(tickerSymbol):
+  def display_summary(tickerSymbol):
         # scrape info on the ticker
         info = get_info(tickerSymbol)
         info_names = ["Name: ", "Close Price: ", "Open Price: ", "52-Week Range: ", "Dividend Rate & Yield: ", \
