@@ -54,7 +54,7 @@ def app():
       st.dataframe(playerstats)
       
         #Twitter
-       API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
+      API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
        API_secret='owHXRfmvCzDCy2wBWERQpwanz6cq6qokuzmUd1jnqsNCtOLxpD'
        Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
        Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
