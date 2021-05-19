@@ -54,26 +54,26 @@ def app():
       st.dataframe(playerstats)
       
         #Twitter
-            API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
-            API_secret='owHXRfmvCzDCy2wBWERQpwanz6cq6qokuzmUd1jnqsNCtOLxpD'
-            Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
-            Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
+       API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
+       API_secret='owHXRfmvCzDCy2wBWERQpwanz6cq6qokuzmUd1jnqsNCtOLxpD'
+       Access_key='1308415930029010944-Tc0xoXoQHBDfGqAJvAJXCEYBwHaV7b'
+       Access_secret='oerSooSzTUW7vjStaDWhbm5XD5WOy09AAEyB8qrGAmegm'
             #Step 2
             #Authenication Object
-            auth=tweepy.OAuthHandler(API_Key,API_secret)
+       auth=tweepy.OAuthHandler(API_Key,API_secret)
 
             # Set the access
-            auth.set_access_token(Access_key,Access_secret)
+       auth.set_access_token(Access_key,Access_secret)
 
             #API Object
-            api=tweepy.API(auth,wait_on_rate_limit=True)
+       api=tweepy.API(auth,wait_on_rate_limit=True)
            
-            st.title('Sentiment Analysis of a users tweets')
-            st.markdown('Enter user and number of tweets')
-            twitterAccount = st.text_input('Twitter User','FantasyLabsNBA')
-            n = int(st.text_input('Number of tweets','50'))
+       st.title('Sentiment Analysis of a users tweets')
+       st.markdown('Enter user and number of tweets')
+       twitterAccount = st.text_input('Twitter User','FantasyLabsNBA')
+       n = int(st.text_input('Number of tweets','50'))
             
-            tweets = tweepy.Cursor(api.user_timeline, 
+       tweets = tweepy.Cursor(api.user_timeline, 
                     screen_name=twitterAccount, 
                     count=None,
                     since_id=None,
@@ -84,8 +84,8 @@ def app():
                     include_entities=False
                     ).items(n);
 
-            sa = pd.DataFrame(data=[tweet.text for tweet in tweets], columns=['Tweet'])
-            st.dataframe(sa)
+      sa = pd.DataFrame(data=[tweet.text for tweet in tweets], columns=['Tweet'])
+      st.dataframe(sa)
             
            
      
