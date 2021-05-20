@@ -42,23 +42,22 @@ def app():
           playerstats["Name"] = playerstats["Name"].str.replace("Č", "C")
           playerstats["Name"] = playerstats["Name"].str.replace("İ", "I")
           playerstats["Pos"] = playerstats["Pos"].str.replace("SF-SG", "SG")
-          playerstats=playerstats.replace({'Name':replace_values})
-    
-            
-            
+          playerstats=playerstats.replace({'Name':replace_values})   
           return playerstats
       playerstats = load_data()
       # Filtering data
       st.header('Display Player Stats of Selected Team(s)')
       #st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns.')
       st.dataframe(playerstats)
-      
-      API_Key='erGvaGFQ04PUhHoIbCbXoB6Gy'
-        #Twitter
+# Upload CSV data
+    
       # Mine Data
       data_file=st.file_uploader("Upload File",type=['csv','txt','docx','pdf'])
       if data_file is None:
             st.write("Enter File, the data set is empty")
+            st.sidebar.markdown("""
+      [Example CSV input file](https://raw.githubusercontent.com/kennethmina24/stockapp/master/playerstats.csv)
+      """)
       if data_file is not None:
             pf = pd.read_csv(data_file)
             pf=pf.drop(columns=['TeamAbbrev','Name + ID','Game Info','Roster Position','ID'])
