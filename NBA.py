@@ -59,7 +59,7 @@ def app():
       [Example CSV input file](https://raw.githubusercontent.com/kennethmina24/stockapp/master/playerstats.csv)
       """)
       if data_file is not None:
-            pf = pd.read_csv(data_file)
+            pf = pd.read_csv('data_file')
             pf=pf.drop(columns=['TeamAbbrev','Name + ID','Game Info','Roster Position','ID'])
             file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
             pf=pf.rename(columns={'Position':'Pos'})
