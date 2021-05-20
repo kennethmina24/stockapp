@@ -56,7 +56,7 @@ def app():
       if data_file is None:
             st.write("Enter File, the data set is empty")
             st.sidebar.markdown("""
-      [Example CSV input file](https://raw.githubusercontent.com/kennethmina24/stockapp/master/playerstats.csv)
+      [Example CSV input file](https://raw.githubusercontent.com/kennethmina24/stockapp/master/DK%20(1).csv)
       """)
       if data_file is not None:
             pf = pd.read_csv(data_file)
